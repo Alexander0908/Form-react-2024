@@ -46,14 +46,14 @@ class App extends Component {
   }
 
   onToggleProp = (id, prop) => {
-    this.setState(({data}) => {
-      data.map(item => {
+    this.setState(({data}) => ({
+      data: data.map(item => {
         if (item.id === id) {
           return {...item, [prop]: !item[prop]}
         }
         return item;
       })
-    })
+    }))
   }
 
   render() {

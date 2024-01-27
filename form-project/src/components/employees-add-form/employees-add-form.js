@@ -18,11 +18,24 @@ class EmployeesAddForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+        const inputs = document.querySelectorAll('.new-post-label');
+    
+        inputs.forEach((input) => {
+            input.style.borderColor = ''; // Resetting the border color for all input elements
+        });
+    
+        if (this.state.name.length < 3 || !this.state.salary) {
+            inputs.forEach((input) => {
+                input.style.borderColor = 'red';
+            });
+            return;
+        }
+    
         this.props.onAdd(this.state.name, this.state.salary);
         this.setState({
             name: '',
             salary: ''
-        })
+        });
     }
 
     render() {
