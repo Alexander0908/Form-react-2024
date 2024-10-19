@@ -11,12 +11,24 @@
     line-height: 35px;
     font-size: 20px;
     cursor: pointer;
-    min-width: 550px;
+}
+
+@media only screen and (min-width: 600px) {
+    .list-group-item span {
+        min-width: 550px;
+    }
+
+    .list-group-item input {
+        font-size: 20px;
+    }
+    .list-group-item .fa-star {
+        width: 35px;
+        transform: translateX(30px);
+    }
 }
 
 .list-group-item input {
     line-height: 35px;
-    font-size: 20px;
     text-align: center;
     border: 0;
 }
@@ -39,14 +51,12 @@
 }
 
 .list-group-item .fa-star {
-    width: 35px;
     height: 35px;
     text-align: center;
     line-height: 35px;
     font-size: 16px;
     color: #FFD700;
     transition: 0.3s all;
-    transform: translateX(30px);
     opacity: 0;
 }
 
@@ -63,3 +73,16 @@
     color: #aeaeae;
 }
   
+
+@media only screen and (max-width: 600px) {
+    .list-group-item span {
+        font-size: 14px;
+    }
+    .list-group-item .fa-star {
+        width: 35px;
+        transform: translateX(10px);
+    }
+    .list-group-item-input {
+        max-width: 65px;
+    }
+}
