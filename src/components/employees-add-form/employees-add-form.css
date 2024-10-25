@@ -3,7 +3,7 @@
     padding: 25px;
     background-color: #3d5a80;
     border-radius: 4px;
-    box-shadow: 15px 15px 30px rgba(0,0,0, .15);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, .15);
     color: #fff;
 }
 
@@ -18,11 +18,11 @@
     }
 }
 
-
 @media only screen and (max-width: 600px) {
     .btn-group {
         display: grid;
     }
+  
     .add-form input {
         margin-right: 20px;
     }
